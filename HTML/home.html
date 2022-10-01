@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="/CSS/home.css">
     <script src="/JS/home.js"></script>
-
+    <script src="/JS/login.js"></script>
 </head>
 <body>
    <header>
@@ -24,8 +24,8 @@
         <div class="header_items account">
            <div><i class="fas fa-user-circle"></i>
         </div> 
-           <div>
-           <a href="/HTML/login.html" style="text-decoration: none; color:white"> <p>Login/Register</p></a>
+           <div class="login_auth">
+           <a href="/HTML/login.html" style="text-decoration:none;color:white;"><p id="log">Login/Register</p></a> 
         </div> 
         </div >
         <div  class="header_items cart_items">
@@ -464,3 +464,15 @@
    </footer>
 </body>
 </html>
+
+<script>
+    let num = localStorage.getItem("count")|| "";
+        if(num==""){
+            document.getElementById("log").innerText = "Login/Register";
+        }else{
+            document.getElementById("log").innerText = num;
+        }
+        num="";
+        localStorage.setItem("count",num);
+    
+</script>

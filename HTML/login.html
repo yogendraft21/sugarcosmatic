@@ -7,7 +7,7 @@
     <title>Login & SignUp</title>
     <script src="https://kit.fontawesome.com/a5e2fc3f3f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/CSS/login.css">
-    <script src="/JS/login.js"></script>
+    <script src="/JS/login.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
@@ -24,9 +24,9 @@
                 </div>
                 <div class="email">
                     <label for="Email">Enter Your Email</label>
-                    <p><input type="text"></p>
+                    <p><input type="text" id="email"></p>
                     <label for="Email">Enter Your Password</label>
-                    <p><input type="password"></p>
+                    <p><input type="password" id="pass"></p>
                 </div>
                 <div class="para">
                     <p>
@@ -34,7 +34,8 @@
                     </p>
                 </div>
                 <div class="btn">
-                    <button id="mybtn" onclick="redirect()">Login</button>
+                    <button class="mybtn" onclick="result()">Login</button>
+                    <button class="mybtn" onclick="register()">Register</button>
                 </div>
 
                 <hr style="margin-top: 10px;">
@@ -53,3 +54,4 @@
     </div>
 </body>
 </html>
+
